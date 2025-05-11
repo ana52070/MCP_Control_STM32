@@ -4,9 +4,10 @@
 
 ### 1.下载源码
 
-```
+```bash
 git clone https://github.com/ana52070/MCP_Control_STM32.git
 cd MCP_Control_STM32
+cd mcp-led_oled
 ```
 
 
@@ -49,12 +50,20 @@ pip install httpx>=0.28.1 mcp>=1.8.0 openai>=1.78.0 python-dotenv>=1.1.0
 
 ### 4.修改代码
 
-修改.env文件为自己的大语言模型：
+修改.env文件为自己的大语言模型，这里默认为ollama
 
 ```
 BASE_URL=http://localhost:11434/v1/
 MODEL=qwen2.5:1.5b
 OPENAI_API_KEY=ollama
+```
+
+而如果是使用DeepSeek模型，则需要在.env中写入如下内容： 
+
+```
+BASE_URL=https://api.deepseek.com 
+MODEL=deepseek-chat    
+OPENAI_API_KEY="DeepSeek API-Key"
 ```
 
 
